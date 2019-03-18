@@ -1,0 +1,21 @@
+<!--<div class="first">
+ <ul *ngFor="let item of json">
+<li><img src="{{item.image_src}}" alt="image not available"></li>
+ </ul>
+  div
+</div>
+-->
+<div class="box">
+  <div class="row">
+    <div class="col-sm-4" *ngFor="let item of json">
+      <img src="{{item.image_src}}" alt="image not available" class="img-thumbnail" (click)="bookFunction(item.id)">
+      <p>{{item.product_name}}</p><br>
+      <p>{{item.price}}</p><br>
+      <p>{{item.size}}</p>
+      <p>{{parentData}}</p>
+      <div class="overlay">
+        <img src="{{item.image_src_onHover}}" class="img-thumbnail" />
+      </div>
+    </div>
+  </div>
+</div>
